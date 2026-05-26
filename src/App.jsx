@@ -1,17 +1,53 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-
+import { useState } from "react";
+import "./index.css";
+import { Accordian } from "./accordian";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-   <>
-   <h1>Hello world Shivshankar here</h1>
-   </>
-  )
+    <>
+      <div class="navbar bg-base-300 shadow-sm">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">👨🏼‍💻 DevTinder</a>
+        </div>
+        <div class="flex gap-2">
+          <div class="dropdown dropdown-end mx-4">
+            <div
+              tabIndex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex="-1"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-3xl font-bold flex justify-center">Hello world!</h1>
+    </>
+  );
 }
 
-export default App
+export default App;
